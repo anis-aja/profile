@@ -9,7 +9,9 @@ from django.http import HttpResponse
 urlpatterns = [
     path('', views.indexb),
     path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls'))
+    path('blog/', include('blog.urls')),
+    path('polls/', include('polls.urls'))
+    
 ]
 
 

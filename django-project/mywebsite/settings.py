@@ -75,8 +75,16 @@ WSGI_APPLICATION = 'mywebsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'shopper',
+        'USER': 'shopuser',
+        'PASSWORD': 'shopuser',
+#        'HOST': '127.0.0.1',
+        'HOST' : '/Applications/MAMP/tmp/mysql/mysql.sock',
+        'PORT': '3306',
+#        'UNIX_SOCKET': "/Applications/MAMP/tmp/mysql/mysql.sock",
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
